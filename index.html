@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Restaurant Contact</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Enable dark mode class strategy
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        animation: {
+                            fadeIn: "fadeIn 1s ease-out forwards",
+                        },
+                        keyframes: {
+                            fadeIn: {
+                                from: {
+                                    opacity: 0,
+                                    transform: "translateY(20px)",
+                                },
+                                to: { opacity: 1, transform: "translateY(0)" },
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300"
+    >
+        <!-- Toggle Dark Mode -->
+        <div class="fixed top-4 right-4">
+            <button
+                onclick="document.documentElement.classList.toggle('dark')"
+                class="p-2 bg-gray-200 dark:bg-gray-700 rounded shadow"
+            >
+                Theme
+            </button>
+        </div>
+
+        <section
+            class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-16"
+        >
+            <div class="max-w-6xl mx-auto text-center">
+                <!-- Restaurant Name -->
+                <h1 class="text-5xl font-bold mb-4 animate-fadeIn">
+                    Welcome to
+                    <span class="text-red-600 dark:text-red-400"
+                        >La Tavola</span
+                    >
+                </h1>
+                <p
+                    class="text-xl mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300 animate-fadeIn"
+                    style="animation-delay: 0.2s"
+                >
+                    Authentic Italian dining in the heart of Kyiv. Fresh
+                    ingredients, handcrafted recipes, and a warm, elegant
+                    atmosphere.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div
+                    class="flex justify-center gap-4 mb-12 animate-fadeIn"
+                    style="animation-delay: 0.4s"
+                >
+                    <a
+                        href="#menu"
+                        class="px-6 py-3 bg-red-600 text-white font-semibold rounded shadow hover:bg-red-700 transition"
+                        >View Menu</a
+                    >
+                    <a
+                        href="#reservation"
+                        class="px-6 py-3 border border-red-600 text-red-600 font-semibold rounded hover:bg-red-600 hover:text-white transition"
+                        >Book a Table</a
+                    >
+                </div>
+
+                <!-- Info Grid -->
+                <div
+                    class="grid md:grid-cols-3 gap-6 text-left mb-12 animate-fadeIn"
+                    style="animation-delay: 0.6s"
+                >
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">📍 Address</h3>
+                        <p>123 Pasta Street, Kyiv, Ukraine</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">🕒 Hours</h3>
+                        <p>Mon–Sun: 11:00 AM – 11:00 PM</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">📞 Contact</h3>
+                        <p>+380 44 123 4567<br />hello@latavola.ua</p>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div
+                    class="grid md:grid-cols-3 gap-4 animate-fadeIn"
+                    style="animation-delay: 0.8s"
+                >
+                    <img
+                        src="./assets/clark-douglas-k8FXgsDTm8g-unsplash.jpg"
+                        alt="Pasta Dish"
+                        class="rounded shadow hover:scale-105 transition"
+                    />
+                    <img
+                        src="./assets/glenov-brankovic-e4B5AvA7Jqo-unsplash.jpg"
+                        alt="Interior"
+                        class="rounded shadow hover:scale-105 transition"
+                    />
+                    <img
+                        src="./assets/jakub-kapusnak-tEVisOXz26Y-unsplash.jpg"
+                        alt="Italian Food"
+                        class="rounded shadow hover:scale-105 transition"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 animate-fadeIn">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">
+                    🍽 Contact Our Restaurant
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-10">
+                    We’d love to hear from you — or better, have you visit us!
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Info -->
+                    <div class="text-left space-y-4">
+                        <p>
+                            📍 <strong>Address:</strong> 456 Tasty Blvd, Food
+                            City
+                        </p>
+                        <p>📞 <strong>Phone:</strong> +1 (555) 987-6543</p>
+                        <p>
+                            📧 <strong>Email:</strong>
+                            <a
+                                href="mailto:hello@delicious.com"
+                                class="text-indigo-600 dark:text-indigo-400 hover:underline"
+                                >hello@delicious.com</a
+                            >
+                        </p>
+                        <p>
+                            🕒 <strong>Hours:</strong> Mon–Sun: 11:00 AM – 11:00
+                            PM
+                        </p>
+                    </div>
+
+                    <!-- Map -->
+                    <div>
+                        <iframe
+                            class="w-full h-64 rounded shadow"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7437.096351078146!2d30.51905134249009!3d50.450628551309265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sua!4v1747509406082!5m2!1sen!2sua"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
